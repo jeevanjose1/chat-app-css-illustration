@@ -1,0 +1,13 @@
+
+
+@mixin gradient($position) {
+
+    background-image: linear-gradient($position, hsl(264, 100%, 61%),  hsl(293, 100%, 63%));
+    
+}
+
+@mixin br($radius) {
+
+    border-radius: $radius;
+    
+}

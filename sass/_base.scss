@@ -1,0 +1,345 @@
+body{
+ position: relative;
+    &::after{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        height: 600px;
+        width: 31.25%;
+        left: -100px;
+        top: 0;
+        @include gradient(38deg);
+        z-index: -1;
+        border-bottom-right-radius:  300px;
+        border-bottom-left-radius:  300px;
+
+        @media (max-width:500px){
+            width: 300px;
+            left: -70px;
+            height: 400px;
+        }
+    }
+   
+    background-color: $ightGrayishViolet;
+    height: 800px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainsection{
+    display: flex;
+    align-items: center;
+   flex-wrap: wrap;
+   justify-content: center;
+   height: 90vh;
+   
+    width: 100%;
+    
+
+    .content{
+       padding-left: 10%;
+        width: 500px;
+        @media (max-width:500px){
+            padding-left: 0;
+            text-align: center;
+            padding: 20%;
+         }
+
+         &__heading{
+
+          font-size: 35px;
+          font-weight: 500;
+          color:$VeryDarkDesaturatedViolet;
+          margin-bottom: 40px;
+         }
+
+         &__detials{
+             font-size: 14px;
+             color: $GrayishBlue;
+             line-height: 1.5;
+
+         }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .mobile{
+       
+       width: 300px;
+       @media (max-width:500px){
+        
+     }
+
+        &__main{
+            background-color: $ightGrayishViolet;
+            border-radius: 30px;
+            border: solid 10px white;
+           
+            
+        }
+
+        &__header{
+            display: flex;
+            @include gradient(to right);
+            height: 75px;
+            align-items: flex-end;
+             position: relative;
+            padding: 15px;
+            border-radius: 20px 20px 10px 10px ;
+
+            &::after
+            {
+
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top:-2px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $White;
+                border-radius: 0 0 15px 15px;
+                height: 20px;
+                width: 170px;
+
+            }
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: solid 2px white;
+                margin: 0 10px;
+                
+            }
+
+            &--heading{
+             margin: 0 90px 0 0 ;
+
+            }
+
+            .fa-angle-left, .fa-ellipsis-v{
+                color: $White;
+                margin-bottom: 5px;
+              
+                
+                
+            }
+            .fa-angle-left{
+                font-size: 20px;
+            }
+            &--name{
+
+                color: $White;
+                font-size: 14px;
+                font-weight: 500;
+            
+            }
+
+            &--sub{
+
+                color: $PaleViolet;
+                font-size: 10px;
+                font-weight: 500;
+            }
+        }
+
+
+        &__body{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+                .chat{
+                    padding: 10px 10px 10px 10px;
+                }
+
+                /*chat 1 2 left start*/
+            &--chat1, &--chat2{
+                width: 165px;
+                background-color: $ightGrayishViolet2;
+                border-radius: 15px 15px 15px 10px;
+                margin-bottom: 10px;
+                padding-right: 20px !important;
+
+            }
+
+            &--leftchat1, &--leftchat2{
+                color: $ModerateViolet;
+                font-size: 10px;
+                line-height: 1.5;
+            }
+
+             /*chat 1 2 left ends*/
+
+
+             /*chat 3 4 5 right start*/
+             
+             &--chat3{
+             display: flex;
+             justify-content: flex-end;
+             margin-top: 20px !important;
+             padding: 0 !important;
+             }
+
+             &--rightchatimg1{
+
+                width: 40px;
+                height: 40px;
+                border-radius: 10px;
+               
+             }
+             &--rightchatimg1:not(:last-child){
+                margin-right:10px;
+             }
+
+             &--chat4{
+
+                width: 165px;
+                background-color: $White;
+                border-radius: 15px 15px 10px 15px;
+                margin-top: 10px;
+                padding: 10px !important;
+                align-self: flex-end;
+
+                
+             }
+             
+             &--rightchat2{
+                color: $DesaturatedDarkViolet;
+                font-size: 10px;
+              line-height: 1.5;
+            }
+
+
+            &--chat5{
+
+                width: 100px;
+                background-color: $White;
+                border-radius: 15px 15px 10px 15px;
+                margin-top: 10px;
+                padding: 10px !important;
+                align-self: flex-end;
+
+                
+             }
+             
+             &--rightchat3{
+                color: $DesaturatedDarkViolet;
+                font-size: 10px;
+              line-height: 1.5;
+            }
+              /*chat 3 4 5 right end*/
+
+               /*chat 6 7 8 right start*/
+
+              &--chat6{
+                width: 165px;
+                background-color: $ightGrayishViolet2;
+                border-radius: 15px 15px 15px 10px;
+                margin: 20px 0 10px 0;
+                padding-right: 20px !important;
+
+            }
+
+            &--leftchat3{
+                color: $ModerateViolet;
+                font-size: 10px;
+                line-height: 1.5;
+            }
+
+           
+
+
+
+            &--chat7, &--chat8
+            {
+                display:flex;
+                align-items: center;
+                @include gradient(to right)
+                margin-bottom:10px;
+                width:195px;
+                border-radius: 15px 15px 15px 10px;
+                color: $White;
+
+
+            }
+
+            .fa-genderless{
+         margin-right: 10px;
+            }
+
+            &--chatdetials{
+            
+                font-size: 10px;
+               
+
+                .first{
+                    font-size: 13px;
+                    margin-left: 50px;
+                }
+
+                .second{
+                    
+                    margin-left:70px;
+                    font-size: 13px;
+                }
+            }
+
+                /*chat 6 7 8 right ends*/ 
+
+
+                /*typearea  start*/
+
+
+
+                &--type{
+               position: relative;
+                }
+
+                &--text, 
+                &--text:active,
+                &--text:focus{
+                    width: 100%;
+                    height: 35px;
+                    border-radius: 20px;
+                    border: none;
+                    outline: none;
+                    position: relative;
+                    padding: 10px;
+
+                    
+                    
+                }
+
+
+                
+                .fa-angle-right{
+                    position: absolute;
+
+                    right: 5px;
+                    top: 5px;
+                     text-align: center;
+                     padding-top: 4px;
+                    background-color:$VeryDarkDesaturatedViolet;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    color: $White;
+                }
+
+        }
+        
+    }
+
+
+}
+
